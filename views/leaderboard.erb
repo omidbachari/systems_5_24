@@ -1,0 +1,15 @@
+<h1>Leaderboard</h1>
+<h3>No bull. This is the leaderboard.</h3>
+
+<h4>In order of rank:</h4>
+<ol>
+  <% @team_r.each do |record| %>
+    <li><%="The #{record[0]}:"%>
+      <ul>
+        <li><%= "Wins: #{record[1]}" %></li>
+        <li><%= "Losses: #{record[2]}" %></li>
+      </ul>
+  <% end %>
+</ol>
+
+

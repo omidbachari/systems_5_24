@@ -1,0 +1,17 @@
+<h1><%= params[:team] %></h1>
+<%= "The doggone #{params[:team]} achieved the following record during the current season:" %><br>
+<ul>
+  <li><%= "Wins: #{@full_record[params[:team]]["W"]}" %></li><br>
+  <li><%= "Losses: #{@full_record[params[:team]]["L"]}" %></li>
+</ul>
+
+<h3>Game by game:</h3>
+
+<% @games.each do |game| %>
+  <% if game[0] == params[:team] || game[1] == params[:team] %>
+  <ul>
+    <li><%= "#{game[0]} #{game[2]}" %><br>
+    <%= "#{game[1]} #{game[3]}" %></li>
+  </ul>
+  <% end %>
+<% end %>

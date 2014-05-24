@@ -1,0 +1,13 @@
+<h1>Welcome to the NFL!</h1>
+
+<h3>Select from the options below:</h3>
+
+<ul>
+  <h3>Who is up and who is down? Check out our sweet ass leaderboard!</h3>
+    <li><a href="/leaderboard">Leaderboard</a></li>
+  <h3>Prefer to zoom in on a particular team? You got it, squirt! Click a team below:</h3>
+    <% @teams.each do |team| %>
+      <li><a href="/team/<%= team %>"><%= team %></a></li>
+    <% end %>
+</ul>
+
